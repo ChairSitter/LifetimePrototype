@@ -64,18 +64,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     switch(ageDigit){
                         case 0: 
                             statement = `${age}th`;
-                            console.log('zero')
                         break;
                         case 1:
-                            statement = `${age}st`;
+                            if(age === 11){
+                                statement = `${age}th`;
+                            } else {
+                                statement = `${age}st`;
+                            }
                         break;
                         case 2: 
-                            statement = `${age}nd`;
-                            console.log('two')
+                            if(age === 12){
+                                statement = `${age}th`;
+                            } else {
+                                statement = `${age}nd`;
+                            }
                         break;
                         case 3: 
-                            statement = `${age}rd`;
-                            console.log('three')
+                            if(age === 13){
+                                statement = `${age}th`;
+                            } else {
+                                statement = `${age}rd`;
+                            }
                         break; 
                         default: statement = `${age}th`;
                     }
