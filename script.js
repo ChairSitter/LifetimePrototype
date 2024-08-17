@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             //Year Jan 1st
             if(date.$d.getMonth() === 0 && date.$d.getDate() === 1){
+                dayDiv.style.borderLeft = '4px black solid'
                 dayDiv.style.fontSize = '11.5px';
-                dayDiv.style.border = '3px gold solid'
             }
             if(date.$d.getMonth() === 11 && date.$d.getDate() === 25){
                 dayDiv.style.color = 'green';
@@ -85,12 +85,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     return statement;
                 }
                 dayDiv.style.fontSize = '11.5px';
-                dayDiv.style.border = 'dash red 3px';
+                dayDiv.style.border = 'dash red 5px';
                 dayDiv.innerHTML = `
                 <span>${ending(age)}</span><br/>
                 <span>Bday</span>
                 <div class="day-content"></div>
             `;
+            }
+
+            if(date.$d.getMonth() === 0 && date.$d.getDate() <= 7){
+                dayDiv.style.borderTop = '5px black solid';
+                if(date.$d.getYear() === 100){
+                    dayDiv.style.borderTop = '8px solid black';
+                }
             }
 
             container.appendChild(dayDiv);
