@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const startDate = dayjs('1991-05-30'); // Replace with the actual start date
+    // const startDate = dayjs('1991-05-30');
     const container = document.getElementById('calendar-container');
 
     function generateCalendar(startDate) {
@@ -128,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    
-
-    generateCalendar(startDate);
+    let date = dayjs(prompt("Please enter your birthday in YYYY-MM-DD format", "1991-05-30"));
+    generateCalendar(date);
 });
