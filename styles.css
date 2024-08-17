@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(216, 216, 216); */
+}
+
+#calendar-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 50px; /* Space for fixed header */
+}
+
+#days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    z-index: 20; /* Ensure it's on top */
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+#calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+    /* gap: 2px; */
+    position: relative;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 1px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10; /* Ensure day content is above labels */
+}
+
+.day-content {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 10px;
+    color: #333;
+}
+
+.day:hover {
+    background-color: #e0e0ff;
+}
+
+.day.editable {
+    background-color: #ffecb3;
+}
+
+/* Month-specific background colors */
+.day[data-month="0"] {
+     background-color: rgba(255, 239, 246, 0.5);
+    }   /* January */
+.day[data-month="1"] {
+     background-color: rgba(156, 120, 156, 0.404); 
+    }   /* February */
+.day[data-month="2"] { 
+    background-color: rgba(118, 52, 161, 0.5); 
+    color: black;
+}   /* March */
+.day[data-month="3"] {
+     background-color: rgba(0, 195, 255, 0.514); 
+    }   /* April */
+.day[data-month="4"] { 
+    background-color: rgba(37, 255, 73, 0.5); 
+}   /* May */
+.day[data-month="5"] {
+     background-color: rgba(0, 194, 0, 0.5); 
+    }   /* June */
+.day[data-month="6"] { 
+    background-color: rgba(194, 252, 60, 0.541); 
+}   /* July */
+.day[data-month="7"] {
+     background-color: rgba(255, 255, 0, 0.5); 
+    }   /* August */
+.day[data-month="8"] { 
+    background-color: rgba(255, 208, 0, 0.5); 
+}   /* September */
+.day[data-month="9"] {
+     background-color: rgba(255, 157, 0, 0.5); 
+    }   /* October */
+.day[data-month="10"] { 
+    background-color: rgba(255, 94, 0, 0.514); 
+}  /* November */
+.day[data-month="11"] {
+     background-color: rgba(255, 0, 0, 0.603); 
+    }  /* December */
