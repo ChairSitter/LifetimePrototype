@@ -37,17 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             //Year Jan 1st
             if(date.$d.getMonth() === 0 && date.$d.getDate() === 1){
-                dayDiv.style.borderLeft = '4px black solid'
                 dayDiv.style.fontSize = '11.5px';
             }
+            
             if(date.$d.getMonth() === 11 && date.$d.getDate() === 25){
                 dayDiv.style.color = 'green';
             }
             if(date.$d.getMonth() === 11 && date.$d.getDate() === 25){
                 dayDiv.style.color = 'green';
             }
+            //Leap Day
             if(date.$d.getMonth() === 1 && date.$d.getDate() === 29){
-                dayDiv.style.opacity = '0.80';
+                dayDiv.style.opacity = '0.60';
             }
             if(date.$d.getMonth() === 6 && date.$d.getDate() === 4){
                 dayDiv.style.color = 'blue';
