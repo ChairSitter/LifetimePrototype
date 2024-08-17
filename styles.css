@@ -28,7 +28,6 @@ body {
     color: white;
     z-index: 20; /* Ensure it's on top */
     padding: 10px 0;
-    border-bottom: 2px solid #ccc;
 }
 
 #calendar-container {
@@ -40,7 +39,7 @@ body {
 
 .day {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 1px;
     text-transform: uppercase;
     box-sizing: border-box;
