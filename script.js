@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         default: statement = `${age}th`;
                     }
                     if(age === 0){
-                        statement = 'OG';
+                        statement = '0th';
                     }
                     console.log(statement)
                     return statement;
